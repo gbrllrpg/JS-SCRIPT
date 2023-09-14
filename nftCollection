@@ -1,0 +1,40 @@
+// Create a variable to hold your NFTs as an array
+const nftCollection = [];
+
+// This function will take in some values as parameters, create an
+// NFT object using the parameters passed to it for its metadata,
+// and store it in the nftCollection array.
+function mintNFT(name, desc, tokenID) {
+  const nft = {
+    name: name,
+    desc: desc,
+    tokenID: tokenID
+  };
+  nftCollection.push(nft);
+}
+
+// Create a "loop" that will go through the array of NFTs
+// and print their metadata with console.log()
+function listNFTs() {
+  for (let i = 0; i < nftCollection.length; i++) {
+    const nft = nftCollection[i];
+    console.log("Name: " + nft.name);
+    console.log("Description: " + nft.desc);
+    console.log("Token ID: " + nft.tokenID);
+    console.log("--------------------------");
+  }
+}
+
+// Print the total number of NFTs we have minted to the console
+function getTotalSupply() {
+  console.log("Total NFTs Minted: " + nftCollection.length);
+}
+
+// Call your functions below this line
+mintNFT("PandaPunks", "5690", "PandaPunks is a collection of 1,000 unique digital collectibles living on the Ethereum blockchain. There is 3 classifications of PandaPunks: PANDOPE, PANDUNK, each has its own characteristics & rarities.");
+mintNFT("PandaPunks", "8436", "PandaPunks is a collection of 1,000 unique digital collectibles living on the Ethereum blockchain. There is 3 classifications of PandaPunks: PANDOPE, PANDUNK, each has its own characteristics & rarities.");
+mintNFT("PandaPunks", "398", "PandaPunks is a collection of 1,000 unique digital collectibles living on the Ethereum blockchain. There is 3 classifications of PandaPunks: PANDOPE, PANDUNK, each has its own characteristics & rarities.");
+mintNFT("PandaPunks", "643", "PandaPunks is a collection of 1,000 unique digital collectibles living on the Ethereum blockchain. There is 3 classifications of PandaPunks: PANDOPE, PANDUNK, each has its own characteristics & rarities.");
+
+listNFTs();
+getTotalSupply();
